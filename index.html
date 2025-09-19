@@ -121,13 +121,15 @@
       data.append("entry.2089936329", kelas);  // Kelas
       data.append("entry.1532119486", lat);    // Latitude
       data.append("entry.1697944181", lon);    // Longitude
+      Data.append(“entry.2028310946”, deviceID); // Kolom Device ID (ganti dengan entry ID dari Google Form)
 
-      fetch(formURL, {
-        method: "POST",
-        mode: "no-cors",
-        body: data
+      Fetch(formURL, {
+        Method: “POST”,
+        Mode: “no-cors”,
+        Body: data
       }).then(() => {
-        alert("✅ Absensi berhasil dikirim!");
+
+        Alert(“✅ Absensi berhasil dikirim!\nDevice ID: “ + deviceID);
         document.getElementById("absensiForm").reset();
       }).catch(err => {
         alert("⚠️ Gagal kirim absensi: " + err);
@@ -139,6 +141,7 @@
 </script>
 </body>
 </html>
+
 
 
 
