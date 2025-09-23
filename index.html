@@ -109,7 +109,7 @@
       const jarak = hitungJarak(sekolahLat, sekolahLon, lat, lon);
 
       if (jarak > maxRadius) {
-        alert("❌ Anda berada di luar area sekolah (jarak: " + jarak.toFixed(1) + " m). Absensi ditolak.");
+        alert("❌ Anda berada di luar radius absensi (jarak: " + jarak.toFixed(1) + " m). Absensi ditolak.");
         return;
       }
 
@@ -140,6 +140,7 @@
 </script>
 </body>
 </html>
+
 
 
 
